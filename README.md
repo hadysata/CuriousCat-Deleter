@@ -15,7 +15,7 @@ Flutter Project to delete [CuriousCat] tweets from your [Twitter] account!
   * [Conventions](#conventions)
     + [Commits and PRs](#commits-and-prs)
     + [Dart File Naming](#dart-file-naming)
-- [Build, Run and Deploy](#build--run-and-deploy)
+- [Build, Run and Deploy](#build-run-and-deploy)
   * [Clone Repository](#clone-repository)
   * [Setup](#setup)
   * [Run](#run)
