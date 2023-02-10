@@ -133,16 +133,23 @@ class _HomeViewState extends ConsumerState<HomeView> {
                         // padding: EdgeInsets.symmetric(vertical: 2.h, horizontal: 5.w),
                         itemCount: curiouscatTweets.length,
                         itemBuilder: (context, index) {
-                          return Padding(
-                            padding: EdgeInsets.all(4.sp),
-                            child: Container(
-                              decoration: DesignConstants.containerDecoration,
-                              child: Padding(
-                                padding: EdgeInsets.all(15.sp),
-                                child: Text(curiouscatTweets[index].text),
+                          return GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                controller.curiouscatTweets.removeWhere((tweet) => curiouscatTweets[index] == tweet);
+                              });
+                            },
+                            child: Padding(
+                              padding: EdgeInsets.all(4.sp),
+                              child: Container(
+                                decoration: DesignConstants.containerDecoration,
+                                child: Padding(
+                                  padding: EdgeInsets.all(15.sp),
+                                  child: Text(curiouscatTweets[index].text),
+                                ),
                               ),
-                            ),
-                          ).animate().fade().scale().slide();
+                            ).animate().fade().scale().slide(),
+                          );
                         }),
                   ));
             })
