@@ -142,6 +142,11 @@ To run the script, in the project root folder run:
 flutter run
 ```
 
+## Rate limit
+For the delete tweet endpoint, user rate limit: 50 requests per 15-minute window per each authenticated user.
+
+There is a script in the code to handle this rate limit, but sometimes Twitter API doesn't return the status or show that the rate limit is reached, so if you encountered any issue, wait 15 minute.
+
 ## License
 
 Licensed under the APLv2. See the [LICENSE] file for details.

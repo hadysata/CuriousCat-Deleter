@@ -20,6 +20,7 @@ class HomeViewController {
 
   Future<void> deleteCuriouscatTweets() async {
     final pr = ProgressDialog(context);
+    int deleteCounter = 0;
     Duration waitDuration;
 
     pr.show();
@@ -28,10 +29,22 @@ class HomeViewController {
       final isDeleted = await TwitterServices.deleteTweet(id: tweet.id);
 
       if (isDeleted) {
+        deleteCounter++;
         waitDuration = const Duration(milliseconds: 500);
       } else {
+
+        // Rate limit reached, status from api
+        deleteCounter = 0;
         waitDuration = const Duration(minutes: 15);
       }
+
+      // Rate will be reached, so we wait 15 minutes
+      if(deleteCounter >= 50){
+        deleteCounter = 0;
+        waitDuration = const Duration(minutes: 15);
+      }
+
+
 
       await Future.delayed(waitDuration, () {});
     }
