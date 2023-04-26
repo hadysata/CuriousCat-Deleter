@@ -114,11 +114,26 @@ URI_SCHEME=
 
 These are Twitter keys used by the app to use Twitter API; you can get these keys from [Twitter developer portal](https://developer.twitter.com/en/portal/)
 
+1- Go to the developer portal, click on `Overview`
+
+<img width="252" alt="Screenshot 2023-04-26 at 8 46 58 PM" src="https://user-images.githubusercontent.com/40350360/234719866-dd9ae0e1-c69a-490d-8898-dfd284c9296c.png">
+
+2- Create a new native app
+
+<img width="400" alt="Screenshot 2023-04-27 at 1 56 58 AM" src="https://user-images.githubusercontent.com/40350360/234720141-2ea1bedb-0732-4d24-95a1-2587d0917a0b.png">
+
+3- Make sure to have the same settings as below
+
+<img height="450" alt="Screenshot 2023-04-26 at 8 45 59 PM" src="https://user-images.githubusercontent.com/40350360/234719950-9f5546e2-5515-411d-b996-c81559a4206b.png">
+
+
 `REDIRECT_URI` & `URI_SCHEME` should look something similar to:
 ```Dart
 REDIRECT_URI=com.hadysata.curiouscatdeleter.oauth://callback/
 URI_SCHEME=com.hadysata.curiouscatdeleter.oauth
 ```
+
+URI_SCHEME should be the same is your app bundle id
 
 ### Run
 To run the script, in the project root folder run:
