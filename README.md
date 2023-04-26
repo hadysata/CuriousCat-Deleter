@@ -114,6 +114,12 @@ URI_SCHEME=
 
 These are Twitter keys used by the app to use Twitter API; you can get these keys from [Twitter developer portal](https://developer.twitter.com/en/portal/)
 
+`REDIRECT_URI` & `URI_SCHEME` should look something similar to:
+```Dart
+REDIRECT_URI=com.hadysata.curiouscatdeleter.oauth://callback/
+URI_SCHEME=com.hadysata.curiouscatdeleter.oauth
+```
+
 ### Run
 To run the script, in the project root folder run:
 
